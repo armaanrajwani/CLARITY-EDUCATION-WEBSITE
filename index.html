@@ -583,6 +583,47 @@
     .hero-stats { gap: 1.5rem; }
     .footer-inner { flex-direction: column; text-align: center; }
   }
+  /* FIX CONTACT + IMAGE ALIGNMENT */
+
+.contact-grid {
+  align-items: flex-start;
+}
+
+.student-section-link {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.student-box {
+  margin-top: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.student-box img {
+  display: block;
+  margin-top: 0;
+}
+
+/* HOVER EFFECT */
+
+.student-box {
+  transition: transform 0.25s ease;
+}
+
+.student-box:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.student-box img {
+  transition: all 0.25s ease;
+}
+
+.student-box:hover img {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+}
+
+
 </style>
 </head>
 <body>
@@ -777,35 +818,22 @@
           </div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="e.g. Riya Sharma" required />
-          </div>
-          <div class="form-group">
-            <label>Phone / Email</label>
-            <input type="text" placeholder="e.g. +91 95185 67220" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Subject</label>
-          <select>
-            <option value="">Select a topic...</option>
-            <option>Course Enquiry</option>
-            <option>Pricing & Plans</option>
-            <option>Technical Support</option>
-            <option>Partnership</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Tell us how we can help..." rows="4" required></textarea>
-        </div>
-        <button type="submit" class="form-btn">Send Message →</button>
-        <div class="form-success" id="form-success">✅ Message sent! We'll be in touch soon.</div>
-      </form>
+<!-- STUDENT SECTION BUTTON -->
+<section class="student-section-link">
+
+  <div class="student-box">
+
+    <a href="student-section.html">
+
+      <img src="CLARITY STUDENT SECTION IMAGE.png" width= 550 alt="Student Section">
+
+    </a>
+
+  </div>
+
+</section>
+
+
     </div>
   </div>
 </section>
